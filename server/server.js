@@ -24,6 +24,9 @@ const corsOptions = {
     "http://localhost:3002", // Bot client
     "http://localhost:5173", // Vite default port (fallback)
     "https://application-tracking-system-oihy.onrender.com",
+    "https://application-tracking-system-blush.vercel.app", // applicant client
+    "https://application-tracking-system-aqjf.vercel.app", // admin client
+    "https://application-tracking-system-4cx8.vercel.app", // bot client
   ],
   credentials: true,
   optionsSuccessStatus: 200,
