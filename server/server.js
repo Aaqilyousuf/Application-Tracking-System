@@ -23,6 +23,7 @@ const corsOptions = {
     "http://localhost:3001", // Admin client
     "http://localhost:3002", // Bot client
     "http://localhost:5173", // Vite default port (fallback)
+    "https://application-tracking-system-oihy.onrender.com",
   ],
   credentials: true,
   optionsSuccessStatus: 200,
