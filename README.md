@@ -1,25 +1,37 @@
-# ATS Multi-Client Architecture
+# ATS (Application Tracking System) — Multi-Client Platform
 
-This is a multi-client Application Tracking System (ATS) built with the MERN stack. The system consists of one backend API and three separate frontend clients that all communicate with the same backend.
+The **ATS Multi-Client System** is a complete recruitment management platform built using the **MERN stack**.  
+It allows companies to manage their hiring process efficiently by connecting **Applicants**, **Admins**, and **Recruitment Bots** within a unified ecosystem.
+
+## Key Features
+
+### Applicant
+
+- Register and log in to the applicant dashboard.
+- Browse available job openings and apply instantly.
+- Track application history with real-time updates.
+- View analytical insights (Pie chart and Histogram) about their applications.
+
+### Admin
+
+- Register and log in as admin.
+- Post new job openings and manage existing listings.
+- View and filter all incoming applications.
+- Update application statuses (Accepted / Rejected / Under Review).
+- Leave review comments on applications.
+
+### Bot
+
+- Automate status updates for **technical roles** based on pre-defined logic.
+- Manage applicant review data through backend integration.
+- Operates as an AI-assisted recruiter for repetitive workflow tasks.
 
 ## Architecture Overview
 
-```
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│  Applicant      │    │  Admin          │    │  Bot            │
-│  Client         │    │  Client         │    │  Client         │
-│  (Port 3000)    │    │  (Port 3001)    │    │  (Port 3002)    │
-└─────────────────┘    └─────────────────┘    └─────────────────┘
-         │                       │                       │
-         └───────────────────────┼───────────────────────┘
-                                   │
-                    ┌─────────────────┐
-                    │  Backend API    │
-                    │  (Port 5000)    │
-                    │  Express +      │
-                    │  MongoDB + JWT  │
-                    └─────────────────┘
-```
+- The project follows a **multi-client monorepo architecture** under a single project root named **`Application Tracking System`**, with one backend and three frontend clients — each serving a specific role.
+
+![Architecture Diagram](./assets/architecture.png)
+![ER Diagram](./assets/ATS_ER_Diagram.png)
 
 ## Project Structure
 
